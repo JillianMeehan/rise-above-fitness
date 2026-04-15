@@ -9,6 +9,15 @@ body {
   background-color: rgba(10, 10, 10, 0.9);
 }
 
+.nav-logo {
+  height: 60px;
+  transition: 0.3s;
+}
+
+.nav-logo:hover {
+  transform: scale(1.1);
+}
+
 /* HERO */
 .hero {
   height: 100vh;
@@ -18,7 +27,7 @@ body {
 
 /* HERO LOGO */
 .hero-logo {
-  max-width: 320px;
+  max-width: 500px;
   width: 100%;
   position: relative;
   animation: shine 3s infinite linear;

@@ -24,12 +24,11 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-fluid px-3 px-lg-5">
-        <!-- LOGO -->
         <a class="navbar-brand" href="#">
           <img
             src="images/rize-above-fitness-logo.png"
             alt="logo"
-            height="40"
+            class="nav-logo"
           />
         </a>
 
@@ -63,7 +62,6 @@
     <!-- HERO -->
     <section class="hero d-flex align-items-center text-center text-white">
       <div class="container fade-in">
-        <!-- LARGE LOGO -->
         <div class="logo-wrapper mb-4">
           <img
             src="images/rize-above-fitness-logo.png"
@@ -77,9 +75,9 @@
           no matter your starting point.
         </p>
 
-        <a href="#contact" class="btn btn-primary btn-lg mt-3"
-          >Start Your Journey</a
-        >
+        <a href="#contact" class="btn btn-primary btn-lg mt-3">
+          Start Your Journey
+        </a>
 
         <p class="mt-3 small text-muted">
           Certified Trainer • Nutrition Coach • All Levels Welcome
@@ -91,23 +89,19 @@
     <section id="services" class="text-center fade-in">
       <div class="container">
         <h2>Services</h2>
-
         <div class="row mt-5">
           <div class="col-md-3 mb-4">
             <h5>Personal Training</h5>
             <p>One-on-one coaching tailored to your goals and lifestyle.</p>
           </div>
-
           <div class="col-md-3 mb-4">
             <h5>Strength & Conditioning</h5>
             <p>Build strength and confidence through functional training.</p>
           </div>
-
           <div class="col-md-3 mb-4">
             <h5>Nutrition Coaching</h5>
             <p>Simple, sustainable guidance that fits your life.</p>
           </div>
-
           <div class="col-md-3 mb-4">
             <h5>All Levels Welcome</h5>
             <p>Programs for beginners, youth, and seniors.</p>
@@ -122,19 +116,16 @@
     <section id="about" class="text-center fade-in">
       <div class="container" style="max-width: 800px">
         <h2>About Michelle</h2>
-
         <p class="mt-4">
           Hi, I’m Michelle — a certified personal trainer and nutrition coach. I
           help busy individuals build strength, improve their health, and feel
           more confident without overwhelming their lifestyle.
         </p>
-
         <p>
           As a wife and mom of two, I understand how hard it can be to
           prioritize your health. That’s why I create realistic, sustainable
           programs that fit into your life.
         </p>
-
         <p class="fw-bold mt-3">
           Rize Above — no matter your starting point, you belong here.
         </p>
@@ -147,16 +138,13 @@
     <section id="gallery" class="text-center fade-in">
       <div class="container">
         <h2>Training Environment</h2>
-
         <div class="row mt-5">
           <div class="col-md-4 mb-4">
             <img src="images/kettlebell-woman.jpg" class="img-fluid" />
           </div>
-
           <div class="col-md-4 mb-4">
             <img src="images/woman-gym-weights.jpg" class="img-fluid" />
           </div>
-
           <div class="col-md-4 mb-4">
             <img src="images/pregnant-woman-gym.jpg" class="img-fluid" />
           </div>
@@ -169,24 +157,54 @@
       <div class="container" style="max-width: 500px">
         <h2>Start Your Journey</h2>
 
-        <form>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          id="contact-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Name" />
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              placeholder="Name"
+              required
+            />
           </div>
 
           <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+              required
+            />
           </div>
 
           <div class="mb-3">
             <textarea
+              name="message"
               class="form-control"
               rows="4"
               placeholder="Message"
             ></textarea>
           </div>
 
-          <button class="btn btn-primary w-100">Send Message</button>
+          <button class="btn btn-primary w-100" id="submit-btn">
+            Send Message
+          </button>
+
+          <!-- SUCCESS MESSAGE -->
+          <p
+            id="form-success"
+            style="display: none; margin-top: 15px; color: #4f6bff"
+          >
+            Thank you! Your message has been sent. We’ll be in touch soon 💪
+          </p>
         </form>
       </div>
     </section>
@@ -194,6 +212,36 @@
     <footer class="text-center py-3">
       <p>© 2026 Rize Above Fitness</p>
     </footer>
+
+    <!-- JS -->
+    <script>
+      const form = document.getElementById("contact-form");
+      const successMessage = document.getElementById("form-success");
+      const button = document.getElementById("submit-btn");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        button.disabled = true;
+        button.innerText = "Sending...";
+
+        const formData = new FormData(form);
+
+        fetch("/", {
+          method: "POST",
+          body: formData,
+        })
+          .then(() => {
+            form.reset();
+            successMessage.style.display = "block";
+            button.innerText = "Sent!";
+          })
+          .catch(() => {
+            button.innerText = "Error - Try Again";
+            button.disabled = false;
+          });
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
