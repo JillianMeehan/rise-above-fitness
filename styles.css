@@ -14,12 +14,13 @@ body {
 }
 
 .nav-logo {
-  height: 100px;
+  height: 75px;
   transition: 0.3s;
 }
 
 .nav-logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px rgba(30, 60, 255, 0.8));
 }
 
 .nav-link {
@@ -212,6 +213,24 @@ form textarea::placeholder {
 /* FOOTER */
 footer {
   color: #888;
+}
+
+/*SOCIAL LINKS*/
+.social-links a {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(30, 60, 255, 0.8),
+    0 0 16px rgba(30, 60, 255, 0.6),
+    0 0 24px rgba(30, 60, 255, 0.4);
+  transform: translateY(-2px) scale(1.1);
 }
 
 @media (max-width: 991px) {
