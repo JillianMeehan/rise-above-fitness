@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rize Above Fitness</title>
+    <meta
+      name="description"
+      content="Rize Above Fitness provides personal training and nutrition coaching to help you build strength, confidence, and healthier habits in a supportive environment."
+    />
+    <title>Rize Above Fitness | Personal Training & Nutrition Coaching</title>
 
     <!-- Bootstrap -->
     <link
@@ -20,14 +24,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
+  <body id="top">
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-fluid px-3 px-lg-5">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#top">
           <img
             src="images/rize-above-navbar-logo.png"
-            alt="logo"
+            alt="Rize Above Fitness logo"
             class="nav-logo"
           /><span class="fw-bold">Rize Above</span>
         </a>
@@ -60,28 +64,46 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero d-flex align-items-center text-center text-white">
+    <section class="hero d-flex align-items-center text-white">
       <div class="container fade-in">
-        <div class="logo-wrapper mb-5">
-          <img
-            src="images/rize-above-fitness-logo.png"
-            class="hero-logo"
-            alt="logo"
-          />
+        <div class="row align-items-center">
+          <!-- Left: Michelle -->
+          <div class="col-lg-6 order-2 text-center mb-5 mb-lg-0 hero-left">
+            <img
+              src="images/michelle-trainer.png"
+              alt="Michelle, Certified Personal Trainer"
+              class="img-fluid hero-photo"
+            />
+          </div>
+
+          <!-- Right: Logo & Content -->
+
+          <div class="col-lg-6 order-1 text-center hero-content">
+            <img
+              src="images/rize-above-fitness-logo.png"
+              class="hero-logo mb-3"
+              alt="Rize Above Fitness Logo"
+            />
+
+            <div class="hero-text mx-auto">
+
+              <p class="hero-tagline">FITNESS THAT FITS YOUR LIFE</p>
+              <p class="lead mb-5">
+                Personalized trainging that fits your lifestyle. Build strength,
+                confidence, and healthier habits that last.
+              </p>
+            </div>
+
+            <a href="#contact" class="btn btn-primary btn-lg">
+              Start Your Journey
+            </a>
+
+            <p class="mt-5 small">
+              Certified Personal Trainer • Certified Nutrition Coach • CPR & AED
+              Certified
+            </p>
+          </div>
         </div>
-
-        <p class="lead">
-          Real training for real life. Build strength, confidence, and balance —
-          no matter your starting point.
-        </p>
-
-        <a href="#contact" class="btn btn-primary btn-lg mt-3">
-          Start Your Journey
-        </a>
-
-        <p class="mt-5 small">
-          Certified Trainer • Nutrition Coach • All Levels Welcome
-        </p>
       </div>
     </section>
 
@@ -90,70 +112,105 @@
       <div class="container">
         <h2>Services</h2>
         <div class="row mt-5">
-          <div class="col-md-3 mb-4">
+          <div class="col-md-3 mb-2">
             <h5>Personal Training</h5>
-            <p>One-on-one coaching tailored to your goals and lifestyle.</p>
+            <p>
+              Focused one-on-one coaching tailored to your goals, whether you're
+              looking to lose weight, build strength, or improve your overall
+              health.
+            </p>
           </div>
-          <div class="col-md-3 mb-4">
-            <h5>Strength & Conditioning</h5>
-            <p>Build strength and confidence through functional training.</p>
-          </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-3 mb-2">
             <h5>Nutrition Coaching</h5>
-            <p>Simple, sustainable guidance that fits your life.</p>
+            <p>
+              Practical nutrition guidance that helps you create healthier
+              habits without restrictive dieting or unrealistic expectations.
+            </p>
           </div>
-          <div class="col-md-3 mb-4">
-            <h5>All Levels Welcome</h5>
-            <p>Programs for beginners, youth, and seniors.</p>
+          <div class="col-md-3 mb-2">
+            <h5>Personalized Programs</h5>
+            <p>
+              Every training plan is customized to your fitness level,
+              lifestyle, and long-term goals—because no two clients are the
+              same.
+            </p>
+          </div>
+
+          <div class="col-md-3 mb-2">
+            <h5>Adults • Seniors • Youth</h5>
+            <p>
+              Fitness coaching designed for every stage of life, with workouts
+              that meet you where you are and help you move forward safely.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <hr class="divider" />
-
     <!-- ABOUT -->
-    <section id="about" class="text-center fade-in">
-      <div class="container" style="max-width: 800px">
-        <h2>About Michelle</h2>
+    <section id="about" class="fade-in py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 text-center mb-2 mb-lg-0">
+            <img
+              src="images/michelle-trainer.png"
+              alt="Michelle, owner of Rize Above Fitness"
+              class="img-fluid rounded"
+            />
+          </div>
 
-        <p class="mt-4">
-          Hi, I’m Michelle — a certified personal trainer and nutrition coach. I
-          help busy individuals build strength, improve their health, and feel
-          more confident without overwhelming their lifestyle.
-        </p>
+          <div class="col-lg-8 mt-4">
+            <h2>Meet Michelle</h2>
 
-        <p>
-          As a wife and mom of two, I understand how hard it can be to
-          prioritize your health. That’s why I create realistic, sustainable
-          programs that fit into your life.
-        </p>
+            <p class="mt-4">
+              Hi, I'm Michelle, a Certified Personal Trainer and Nutrition Coach
+              dedicated to helping people become stronger, healthier, and more
+              confident through personalized fitness coaching.
+            </p>
 
-        <p class="fw-bold mt-3">
-          Rize Above — no matter your starting point, you belong here.
-        </p>
+            <p>
+              I believe fitness should fit your life—not take it over. Every
+              training program is built around your goals, your experience
+              level, and your lifestyle so you can create lasting habits and
+              real results.
+            </p>
+              Whether you're just starting your fitness journey or looking to
+              take your training to the next level, I'm here to help you reach
+              your goals safely and effectively.
+              </p>
+              <p>
+              Train smarter. Not just harder.
+            </p>
+
+            <div class="mt-4">
+              <p class="mb-2">✓ Certified Personal Trainer</p>
+              <p class="mb-2">✓ Certified Nutrition Coach</p>
+              <p class="mb-2">✓ CPR & AED Certified</p>
+              <p class="mb-0">
+                ✓ National Personal Training Institute Graduate
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- GALLERY -->
     <section id="gallery" class="text-center fade-in">
       <div class="container">
-        <h2>Training Environment</h2>
-
-        <div class="row mt-5">
-          <div class="col-md-4 mb-4">
-            <img src="images/kettlebell-woman.jpg" class="img-fluid" />
-          </div>
-
-          <div class="col-md-4 mb-4">
-            <img src="images/woman-gym-weights.jpg" class="img-fluid" />
-          </div>
-
-          <div class="col-md-4 mb-4">
-            <img src="images/pregnant-woman-gym.jpg" class="img-fluid" />
-          </div>
+        <h2>Train in a Private Gym</h2>
+        <p class="mt-3">Enjoy a clean, private training environment equipped with free weights, 
+          cardio equipment, and everything you need to build strength and confidence.</p>
+       
+          <div class="row justify-content-center">
+  <div class="text-center">
+    <img
+      src="images/garage-gym-2.jpg"
+      class="img-fluid gallery-photo"
+      alt="Private training gym"
+    />
+  </div>
+</div>
         </div>
       </div>
     </section>
@@ -161,7 +218,7 @@
     <!-- CONTACT -->
     <section id="contact" class="text-center text-white fade-in">
       <div class="container" style="max-width: 500px">
-        <h2 class="mb-5">Start Your Journey</h2>
+        <h2 class="mb-5">Schedule Your Free Consultation</h2>
 
         <form
           action="https://formspree.io/f/mjgjgpjy"
@@ -214,7 +271,7 @@
     </section>
 
     <footer class="text-center py-3">
-      <p>© 2026 Rize Above Fitness</p>
+      <p>© 2026 Rize Above Fitness | Website designed by Jillian Meehan</p>
     </footer>
 
     <!-- JS -->
@@ -242,6 +299,7 @@
             form.reset();
             successMessage.style.display = "block";
             button.innerText = "Sent!";
+            button.disabled = true;
           })
           .catch(() => {
             button.innerText = "Error - Try Again";
