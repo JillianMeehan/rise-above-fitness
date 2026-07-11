@@ -215,6 +215,9 @@ footer {
 }
 
 @media (max-width: 991px) {
+  .hero {
+    padding-top: 120px;
+  }
   #about {
     text-align: center;
   }
